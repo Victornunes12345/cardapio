@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Pai">
+  <h1 class="T1">🍔 Cardápio Digital</h1>
+
+  <div class="T2">
+  <form id="item-form">
+    <input type="hidden" id="item-id">
+    
+    <label>Nome do item:
+      <input type="text" id="nome" required>
+    </label>
+
+    <label>Preço (R$):
+      <input type="number" id="preco" required>
+    </label>
+
+    <label>Descrição:
+      <textarea id="descricao" required></textarea>
+    </label>
+
+    <label>Categoria:
+      <select id="categoria" required>
+        <option value="">Escolha</option>
+        <option value="Lanche">Lanche</option>
+        <option value="Bebida">Bebida</option>
+        <option value="Sobremesa">Sobremesa</option>
+      </select>
+    </label>
+
+    <label>CEP (opcional):
+      <input type="text" id="cep" maxlength="9">
+    </label>
+
+    <button type="submit">Salvar</button>
+  </form>
+</div>
+
+  <div id="mensagem-api"></div>
+
+  <ul id="lista-itens"></ul>
+</div>
+
+  <script src="style.js"></script>
+</body>
+</html>
